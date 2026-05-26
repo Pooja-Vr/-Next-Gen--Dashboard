@@ -17,7 +17,7 @@ export default function CourseCard({ course }: CourseCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }} // Spring requirement met
       className="group relative p-6 bg-zinc-900 rounded-3xl bento-glow flex flex-col justify-between h-52 overflow-hidden cursor-pointer border border-transparent hover:border-purple-500/20 transition-colors duration-300"
     >
-      {/* Background Subtle Gradient Grain/Mesh Mesh */}
+      {/* Background Subtle Gradient Grain */}
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-pink-500/5 opacity-40 pointer-events-none" />
 
       <div className="flex justify-between items-start z-10">

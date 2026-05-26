@@ -1,5 +1,4 @@
 "use client";
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { LayoutDashboard, BookOpen, BarChart3, Settings } from 'lucide-react';
 
@@ -10,9 +9,13 @@ const navItems = [
   { id: 'settings', label: 'Settings', icon: Settings },
 ];
 
-export default function Sidebar() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+// Sidebar component with responsive design and animated active state indicator
+interface SidebarProps {
+  activeTab: string;
+  setActiveTab: (id: string) => void;
+}
 
+export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
   return (
     <>
       {/* Desktop & Tablet Sidebar */}
@@ -31,7 +34,6 @@ export default function Sidebar() {
                 onClick={() => setActiveTab(item.id)}
                 className="relative flex items-center gap-4 px-4 py-3 text-sm font-medium rounded-xl transition-colors text-zinc-400 hover:text-zinc-200 w-full text-left group"
               >
-                {/* Smooth Background Highlight Snapping */}
                 {isActive && (
                   <motion.div
                     layoutId="activeIndicator"
@@ -47,7 +49,7 @@ export default function Sidebar() {
         </nav>
       </aside>
 
-      {/* Mobile Bottom Navigation Bar (< 768px) */}
+      {/* Mobile Bottom Navigation Bar */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-zinc-950/80 backdrop-blur-md border-t border-zinc-900 flex justify-around items-center z-50 px-6">
         {navItems.map((item) => {
           const Icon = item.icon;
