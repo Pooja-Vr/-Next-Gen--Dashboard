@@ -1,4 +1,3 @@
-"use client";
 import { motion, Variants } from 'framer-motion';
 import type { Course } from '@/types/database.types';
 import HeroCard from './cards/HeroCard';

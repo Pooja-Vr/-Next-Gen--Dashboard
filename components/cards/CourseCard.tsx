@@ -1,4 +1,3 @@
-"use client";
 import { motion } from 'framer-motion';
 import { Course } from '@/types/database.types';
 import * as Icons from 'lucide-react';

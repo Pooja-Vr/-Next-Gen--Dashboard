@@ -1,4 +1,3 @@
-"use client";
 import { motion } from 'framer-motion';
 import { LayoutDashboard, BookOpen, BarChart3, Settings } from 'lucide-react';
 
